@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404</title>
+    <style>
+        :root {
+            --bg-light: #f4f4f4;
+            --text-light: #333;
+            --subtext-light: #666;
+            --box-light: #fff;
+            --shadow-light: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+            --bg-dark: #121212;
+            --text-dark: #fff;
+            --subtext-dark: #bbb;
+            --box-dark: #1e1e1e;
+            --shadow-dark: 0 10px 30px rgba(255, 255, 255, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            background-color: var(--bg-light);
+            color: var(--text-light);
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            background: var(--box-light);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-light);
+            max-width: 400px;
+            width: 90%;
+            overflow: hidden;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 18px;
+            color: var(--subtext-light);
+            margin-top: 10px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 16px;
+            color: white;
+            background: #1a73e8;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+
+        a:hover {
+            background: #135cb8;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* 深色主题模式 */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: var(--bg-dark);
+                color: var(--text-dark);
+            }
+            .container {
+                background: var(--box-dark);
+                box-shadow: var(--shadow-dark);
+            }
+
+            p {
+                color: var(--subtext-dark);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>404</h1>
+        <p>您访问的页面不存在。</p>
+        <a href="/">返回</a>
+    </div>
+
+</body>
+</html>
